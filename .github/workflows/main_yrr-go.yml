@@ -31,4 +31,4 @@ jobs:
       with:
         app-name: 'yrr-go'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_764321bdbcf041728348bb57e30a8fda }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_0ed7634fa71c40a08271e79a62a4f248 }}
