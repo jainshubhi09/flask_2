@@ -35,4 +35,5 @@ jobs:
         app-name: 'tanu-manu'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_4279de3b05db48af84298a5f09621bdc }}
-        package: '.\myapp.zip'
+        package: '.\app.zip'
+    
