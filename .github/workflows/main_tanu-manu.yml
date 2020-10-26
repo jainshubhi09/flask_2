@@ -7,9 +7,6 @@ on:
   push:
     branches:
       - main
-env:
-  AZURE_WEBAPP_NAME: tanu-manu # set this to your application's name
-  AZURE_WEBAPP_PACKAGE_PATH: '.' # set this to the path to your web app project, defaults to the repository root
 
 jobs:
   build-and-deploy:
@@ -25,7 +22,7 @@ jobs:
 
     - name: Install Python dependencies
       run: |
-        python -m venv env
+        python3 -m venv env
         .\env\Scripts\activate
         pip install -r requirements.txt
 
@@ -37,7 +34,5 @@ jobs:
       with:
         app-name: 'tanu-manu'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_4279de3b05db48af84298a5f09621bdc }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_bf5e85d6cbd044b39e37ac6e88416cbd }}
         package: '.\myapp.zip'
-       
-    
