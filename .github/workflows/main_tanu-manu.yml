@@ -26,8 +26,7 @@ jobs:
         .\env\Scripts\activate
         pip install -r requirements.txt
 
-    - name: Zip the application files
-      run: Compress-Archive .\* app.zip
+    
 
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v2
@@ -35,5 +34,5 @@ jobs:
         app-name: 'tanu-manu'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_4279de3b05db48af84298a5f09621bdc }}
-        package: '.\app.zip'
+       
     
